@@ -192,7 +192,6 @@ def search(request):
         :param str request: XML request string
         :return str: XML response
     """
-    print(f'SEARCH {request}')
     tree = xml.fromstring(request)
     term = tree.find('.//string').text  # TODO this is not ideal
 
